@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MemberServiceTest {
 
-    MemberService memberService =  new MemberServiceImpl();
+    MemberService memberService =  new MemberServiceImpl(new MemoryMemberRepository());
 
     @Test
     void join(){

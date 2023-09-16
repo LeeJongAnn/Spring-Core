@@ -11,16 +11,16 @@ public class MemberServiceTest {
     MemberService memberService;
 
     @BeforeEach
-    public void beforeEach(){
+    public void beforeEach() {
         AppConfig appConfig = new AppConfig();
-         memberService = appConfig.memeberService();
+        memberService = appConfig.memberService();
     }
 
 
     @Test
-    void join(){
+    void join() {
 
-        Member member = new Member(1L,"memberA",Grade.VIP  );
+        Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
         assertThat(member).isEqualTo(findMember);
